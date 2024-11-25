@@ -1,0 +1,54 @@
+.filter-bar {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+	border-radius: 0.5em;
+	box-shadow: 0em 0em 2em  hsla(180, 29%, 50%, 0.274);
+	background-color: white;
+	margin-top: -6em;
+}
+
+.lang-cont {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.lang-cont .each-lang {
+	background-color: hsl(180, 52%, 96%);
+	display: flex;
+	align-items: center;
+	gap: 0.2em;
+	border-radius: 0.2em;
+	overflow: hidden;
+}
+
+.lang-cont .each-lang span {
+	font-size: 1.1em;
+	padding-inline: 0.5em;
+}
+
+.lang-cont .each-lang button {
+	background-color: hsl(180, 29%, 50%);
+	padding-inline: 0.5em;
+	padding-block: 0.2em;
+	font-size: 1.1em;
+	border: none;
+	cursor: pointer;
+}
+
+.lang-cont .each-lang button:hover {
+	background-color: hsl(180, 14%, 20%);
+}
+
+.clear-btn {
+	background-color: transparent;
+	border: none;
+	font-size: 1.1em;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.clear-btn:hover {
+	color: hsl(180, 29%, 50%);
+}

@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+
+.card {
+	font-family: "League Spartan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+
+	border-left: 0.3em solid  transparent;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2em;
+	border-radius: 0.5em;
+	box-shadow: 0em 0em 2em  hsla(180, 29%, 50%, 0.274);
+}
+
+.card.featured {
+	border-left-color: hsl(180, 29%, 50%);
+}
+
+.card .profile {
+	display: flex;
+	gap: 1em;
+}
+
+.card .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.card .info .role {
+	padding: 0;
+	margin: 0;
+}
+
+.card .info .role:hover {
+	color:  hsl(180, 29%, 50%);
+	cursor: pointer;
+}
+
+.card .info .comp-info {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+}
+
+.card .info .comp-info .name {
+	color: hsl(180, 29%, 50%);
+	font-size: 1.3em;
+}
+
+.card .info .comp-info .age {
+	background-color: hsl(180, 29%, 50%);
+	padding-inline: 0.5em;
+	padding-block: 0.3em;
+	border-radius: 1em;
+	color: white;
+	text-transform: uppercase;
+}
+
+.card .info .comp-info .is-featured {
+	background-color: hsl(180, 14%, 20%);
+	padding-inline: 0.5em;
+	padding-block: 0.3em;
+	border-radius: 1em;
+	color: white;
+	text-transform: uppercase;
+}
+
+.card .info .job-time {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
+	color:  hsl(180, 8%, 52%);
+}
+
+.card .info .job-time .dots {
+	display: flex;
+	height: 0.3em;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	background-color: hsl(180, 8%, 52%);
+}
+
+.card .job-requirements {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.card .job-requirements button {
+	background-color: hsla(180, 29%, 50%, 0.246);
+	border: none;
+	color: hsl(180, 29%, 50%);
+	font-weight: 550;
+	padding: 0.5em;
+	border-radius: 0.2em;
+	cursor: pointer;
+}
+
+.card .job-requirements button:hover {
+	color: white;
+	background-color: hsl(180, 29%, 50%);
+}
+
+
+/* =======Mobile size========= */
+
+@media (max-width: 47.5em) {
+	.card {
+		flex-direction: column;
+		align-items: start;
+		padding: 1em;
+		position: relative;
+	}
+
+	.info {
+		gap: 1em;
+		margin-top: 2em;
+	}
+
+	.pro-pic{
+		position: absolute;
+		top: -2em;
+		width: 4em;
+	}
+
+	.card .info .comp-info .name {
+		font-size: 1em;
+	}
+
+	.card .job-requirements {
+		border-top: 0.1em solid hsl(180, 8%, 52%);
+		padding-top: 1em;
+		margin-top: 1em;
+		width: 100%;
+	}
+}

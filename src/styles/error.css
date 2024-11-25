@@ -1,0 +1,42 @@
+.error-card {
+	width: 20em;
+	height: 20em;
+	margin: 2em auto;
+	border-radius: 1em;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 1em;
+
+	background: linear-gradient(to right, #ff7e5f, #feb47b); 
+}
+
+.error-card .emoji {
+	font-size: 2em;
+	width: 50%;
+	text-align: center;
+}
+
+.error-card .para {
+	color: gray;
+	font-size: 1.2em;
+}
+
+.error-card .btn {
+	background-color: white;
+	border-radius: 1em;
+	font-size: 1.2em;
+	padding: 0.5em;
+	border: none;
+	color: gray;
+	cursor: pointer;
+}
+
+@media (max-width: 47.5em) {
+	.error-card {
+		width: 15em;
+		height: 15em;
+	}
+}

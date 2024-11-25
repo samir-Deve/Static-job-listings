@@ -1,0 +1,78 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+.spinner {
+	width: 15em;
+	height: 15em;
+	border-radius: 50%;
+	font-size: 1.1em;
+	margin: 5em auto;
+
+
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+	animation: text-fade 1.5s ease-in-out infinite;
+}
+
+.spinner-sector {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 0.5em solid transparent;
+	mix-blend-mode: overlay;
+	animation: spine var(--duration) var(--timing) infinite;
+}
+
+.spinner-sector-red {
+	border-top-color: lightcoral;
+	--duration: 1.5s;
+	--timing: ease-in-out
+}
+
+.spinner-sector-blue {
+	border-right-color: lightblue;
+	--duration: 1.6s;
+	--timing: ease-in-out
+}
+
+.spinner-sector-yellow {
+	border-left-color: lightgreen;
+	--duration: 1.7s;
+	--timing: ease-in-out
+}
+
+@keyframes spine {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes text-fade {
+	0% {
+		color: hsl(0, 0%, 0%);
+	}
+
+	50% {
+		color: hsl(0, 0%, 50%);
+	}
+
+	100% {
+		color: hsl(0, 0%, 0%);
+	}
+}
+
+@media (max-width: 47.5em) {
+	.spinner {
+		width: 7em;
+		height: 7em;
+	}
+}

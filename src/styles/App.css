@@ -1,0 +1,36 @@
+*, *::after, *::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+};
+
+.main-cont {
+	display: flex;
+	flex-direction: column;
+	gap: 10em;
+}
+
+.header {
+	height: 10em;
+	background-image: url("../assets/images/bg-header-mobile.svg");
+	background-color: hsl(180, 29%, 50%);
+	background-position: center;
+}
+
+.cards {
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+	padding-inline: 2em;
+	margin-top: 4em;
+}
+
+
+@media (min-width: 47.5em) {
+	.header {
+		background-image: url("../assets/images/bg-header-desktop.svg");
+	}
+	.cards {
+		gap: 1em;
+	}
+}
