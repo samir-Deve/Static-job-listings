@@ -12,7 +12,7 @@
 
 .header {
 	height: 10em;
-	background-image: url("../assets/images/bg-header-mobile.svg");
+	background-image: url("/images/bg-header-mobile.svg");
 	background-color: hsl(180, 29%, 50%);
 	background-position: center;
 }
@@ -28,7 +28,7 @@
 
 @media (min-width: 47.5em) {
 	.header {
-		background-image: url("../assets/images/bg-header-desktop.svg");
+		background-image: url("/images/bg-header-desktop.svg");
 	}
 	.cards {
 		gap: 1em;

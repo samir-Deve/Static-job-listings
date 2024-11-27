@@ -5,25 +5,26 @@ import Card from "./hooks/card";
 import "./styles/App.css";
 import Loading from "./hooks/loading";
 import FilterBar from "./hooks/filterBar";
+import ErrorCom from "./hooks/error";
 
 function App() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [isError, setError] = useState(null);
   const [filters, setFilters] = useState(null);
 
   useEffect(() => {
     const FetchData = async () => {
       try {
-        const res = await fetch("/data.json");
+        const res = await fetch("./data.json");
 
         if (!res.ok) {
-          throw new Error("Response is not okyyy");
+          throw new Error(`HTTP error! status: ${res.status}`);
         }
         const result = await res.json();
         setData(result);
       } catch (error) {
-        setError(error.mesage);
+        setError(error.message || "An unexpected error occurred.");
       } finally {
         setIsLoading(false);
       }
@@ -46,11 +47,10 @@ function App() {
   }
 
   function Delete(id) {
-    if(filters.length > 1) {
+    if (filters.length > 1) {
       setFilters(filters.filter((eachFilt) => eachFilt.id !== id));
-    }
-    else {
-      setFilters(null)
+    } else {
+      setFilters(null);
     }
   }
 
@@ -68,8 +68,8 @@ function App() {
         )}
         {isLoading ? (
           <Loading />
-        ) : error ? (
-          <Error />
+        ) : isError ? (
+          <ErrorCom isError={isError} />
         ) : !filters ? (
           data.map((eachCard) => (
             <Card key={eachCard.id} eachCard={eachCard} addToFilt={addToFilt} />
@@ -88,8 +88,7 @@ function App() {
                 addToFilt={addToFilt}
               />
             ))
-        )
-        }
+        )}
       </div>
     </div>
   );
