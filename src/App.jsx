@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     const FetchData = async () => {
       try {
-        const res = await fetch("../public/data.json");
+        const res = await fetch("/data.json");
 
         if (!res.ok) {
           throw new Error("Response is not okyyy");
