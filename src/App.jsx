@@ -17,7 +17,7 @@ function App() {
     const FetchData = async () => {
       try {
         const res = await fetch("/data.json");
-
+        console.log(res)
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);
         }
