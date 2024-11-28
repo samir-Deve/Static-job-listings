@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const FetchData = async () => {
       try {
-        const res = await fetch("/data.json");
+        const res = await fetch("/Static-job-listings/data.json");
         console.log(res)
         if (!res.ok) {
           throw new Error(`HTTP error! status: ${res.status}`);

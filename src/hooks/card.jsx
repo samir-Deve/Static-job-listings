@@ -6,7 +6,7 @@ function Card({eachCard, addToFilt}) {
     <div className={`card ${eachCard.featured && `featured`}`}>
       <div className="profile">
         <img 
-				src={`/image/account.svg`} alt="" className="pro-pic" />
+				src={`Static-job-listings${eachCard.logo}`} alt="" className="pro-pic" />
 
         <div className="info">
           <div className="comp-info">
